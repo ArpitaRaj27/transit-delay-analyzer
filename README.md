@@ -1,35 +1,45 @@
+# Transit Delay Analyzer
 
-# Transit Delay Analyzer - Starter Kit
+### 📌 Overview  
+Transit Delay Analyzer is a data-driven project built to analyze and visualize public transit delays using **GTFS (General Transit Feed Specification)** data.  
+The app processes schedule and stop data, calculates reliability metrics, and displays insights through an interactive **Streamlit dashboard**.  
 
-This repo is a working starter for SQL + ETL + Dashboard. It runs on Windows with VS Code.
+The motivation for this project was to explore **real-world transit datasets**, practice **ETL pipelines**, and apply **data analytics + visualization** skills in a practical way.  
 
-## What this does
-- Loads GTFS schedule data into Postgres
-- Simulates realtime arrivals and weather for week 1
-- Computes delays with SQL
-- Shows a Streamlit dashboard
+---
 
-## Quick start
-1. Install Python 3.11+ and Docker Desktop.
-2. Open this folder in VS Code.
-3. Terminal:
-   ```
-   pip install -r requirements.txt
-   docker compose up -d
-   python etl/load_gtfs.py
-   python etl/fetch_actuals.py
-   python etl/fetch_weather.py
-   python etl/build_aggregates.py
-   streamlit run app/streamlit_app.py
-   ```
-4. The dashboard opens in your browser.
+### 🚉 Features  
+- **ETL Pipeline**: Ingests GTFS feed, parses schedules & stops, and loads into PostgreSQL.  
+- **Analytics**: Computes key KPIs such as average delay, 95th percentile delay, and route reliability.  
+- **Visual Dashboard**: Streamlit UI with scorecards, downloadable reports, and visualizations (scatter plots, trends, worst performers).  
+- **Data Source**: GTFS open standard feeds ([example feed](https://gtfs.org/getting-started/example-feed/)).  
+- **Scalable Setup**: Uses Dockerized PostgreSQL for structured data storage.  
 
-## Move from simulate to real data later
-- Replace `fetch_actuals.py` with a real CTA API fetcher.
-- Replace `fetch_weather.py` with a NOAA fetcher.
-- Schedule scripts in Windows Task Scheduler.
+---
 
-## Windows Task Scheduler tip
-- Action: Start a Program -> Program: `python.exe`
-- Arguments: `C:\path\to\project\etl\build_aggregates.py`
-- Set repeat every 30 minutes.
+### 🎯 Why I Built This  
+- To **understand public transit datasets** and their structure.  
+- To gain hands-on experience with:  
+  - **Database design (PostgreSQL, SQLAlchemy)**  
+  - **ETL pipelines (Python, Pandas, psycopg2)**  
+  - **Data visualization (Streamlit)**  
+  - **Containerization (Docker)**  
+- To practice building a project that mimics a **real-world data engineering + analytics use case**.  
+
+---
+
+### 🛠️ Tech Stack  
+- **Python** (pandas, psycopg2, SQLAlchemy)  
+- **PostgreSQL** (relational data model)  
+- **Streamlit** (dashboard & UI)  
+- **Docker** (containerized DB + reproducibility)  
+- **Git/GitHub** (version control & collaboration)  
+
+---
+
+### 🚀 Step-by-Step Guide  
+
+#### 1. Clone the Repository  
+```bash
+git clone https://github.com/yourusername/transit-delay-analyzer.git
+cd transit-delay-analyzer
