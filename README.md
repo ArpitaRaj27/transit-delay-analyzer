@@ -1,45 +1,38 @@
-# Transit Delay Analyzer
+# 🚍 Transit Delay Analyzer
 
-### 📌 Overview  
-Transit Delay Analyzer is a data-driven project built to analyze and visualize public transit delays using **GTFS (General Transit Feed Specification)** data.  
-The app processes schedule and stop data, calculates reliability metrics, and displays insights through an interactive **Streamlit dashboard**.  
-
-The motivation for this project was to explore **real-world transit datasets**, practice **ETL pipelines**, and apply **data analytics + visualization** skills in a practical way.  
+A data-driven app to measure, visualize, and analyze public transit delays using **GTFS feeds**.  
+This project helped me explore **ETL pipelines, databases, data visualization, and Streamlit apps**.  
 
 ---
 
-### 🚉 Features  
-- **ETL Pipeline**: Ingests GTFS feed, parses schedules & stops, and loads into PostgreSQL.  
-- **Analytics**: Computes key KPIs such as average delay, 95th percentile delay, and route reliability.  
-- **Visual Dashboard**: Streamlit UI with scorecards, downloadable reports, and visualizations (scatter plots, trends, worst performers).  
-- **Data Source**: GTFS open standard feeds ([example feed](https://gtfs.org/getting-started/example-feed/)).  
-- **Scalable Setup**: Uses Dockerized PostgreSQL for structured data storage.  
+## 📖 About the Project
+Transit systems generate tons of data, but it’s often hard to analyze reliability in a clear way.  
+I built this project to:
+- Fetch and process **real GTFS data** ([sample feed](https://gtfs.org/getting-started/example-feed/))  
+- Store it in a **PostgreSQL database** (Dockerized)  
+- Run an **ETL pipeline** to load and clean data  
+- Visualize insights with **Streamlit**: KPIs, scorecards, trends, scatter plots, and more  
+
+What I learned:
+- Setting up PostgreSQL in Docker  
+- Writing ETL pipelines in Python (with `psycopg2`, `pandas`)  
+- Building interactive dashboards in **Streamlit + Altair**  
+- Using config-based **Streamlit theming** + custom CSS  
 
 ---
 
-### 🎯 Why I Built This  
-- To **understand public transit datasets** and their structure.  
-- To gain hands-on experience with:  
-  - **Database design (PostgreSQL, SQLAlchemy)**  
-  - **ETL pipelines (Python, Pandas, psycopg2)**  
-  - **Data visualization (Streamlit)**  
-  - **Containerization (Docker)**  
-- To practice building a project that mimics a **real-world data engineering + analytics use case**.  
+## ⚙️ Tech Stack
+- **Python**: pandas, psycopg2, altair, streamlit  
+- **PostgreSQL** (with Docker)  
+- **GTFS Data Feed**  
+- **Docker Compose** for setup  
 
 ---
 
-### 🛠️ Tech Stack  
-- **Python** (pandas, psycopg2, SQLAlchemy)  
-- **PostgreSQL** (relational data model)  
-- **Streamlit** (dashboard & UI)  
-- **Docker** (containerized DB + reproducibility)  
-- **Git/GitHub** (version control & collaboration)  
+## 🚀 How to Run
 
----
-
-### 🚀 Step-by-Step Guide  
-
-#### 1. Clone the Repository  
+1. Clone the repo
 ```bash
 git clone https://github.com/yourusername/transit-delay-analyzer.git
 cd transit-delay-analyzer
+
