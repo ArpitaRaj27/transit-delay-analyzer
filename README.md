@@ -33,6 +33,6 @@ What I learned:
 
 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/transit-delay-analyzer.git
+git clone https://github.com/ArpitaRaj27/transit-delay-analyzer.git
 cd transit-delay-analyzer
 
