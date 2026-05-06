@@ -27,7 +27,7 @@ routes_all = qdf("SELECT DISTINCT route FROM agg_daily ORDER BY route;")
 route_options = routes_all["route"].tolist() if not routes_all.empty else []
 selected_routes = st.sidebar.multiselect("Routes", options=route_options, default=route_options[:3])
 
-st.sidebar.markdown("---")
+st.sidebar.markdown("---" 
 st.sidebar.caption("Data refreshes when ETL runs")
 
 def build_where(date_from, date_to, selected_routes):
