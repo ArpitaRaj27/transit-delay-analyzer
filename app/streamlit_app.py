@@ -40,7 +40,7 @@ def build_where(date_from, date_to, selected_routes):
 
 where, base_params = build_where(date_from, date_to, selected_routes)
 
-# KPI section
+# KPI section 
 kpi = qdf(f"""
   SELECT
     ROUND(AVG(avg_delay_min)::numeric,2) AS avg_delay,
