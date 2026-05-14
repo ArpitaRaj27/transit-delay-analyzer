@@ -11,7 +11,7 @@ ENGINE = create_engine("postgresql+psycopg2://transit:transit@localhost:5432/tra
 def qdf(sql, params=None):
     with ENGINE.connect() as c:
         return pd.read_sql_query(text(sql), c, params=params)
-        
+     
 st.set_page_config(page_title="Transit Delay Analyzer", layout="wide")
 st.title("Transit Delay Analyzer")
 
