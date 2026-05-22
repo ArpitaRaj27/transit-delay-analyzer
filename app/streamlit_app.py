@@ -63,7 +63,7 @@ score = qdf(f"""
   FROM agg_daily
   {where}
   ORDER BY day DESC, route
-""", base_params)
+""", base_params) 
 
 st.subheader("Scorecard")
 st.dataframe(score, use_container_width=True)
