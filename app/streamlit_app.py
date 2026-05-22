@@ -70,6 +70,7 @@ st.dataframe(score, use_container_width=True)
 st.download_button("Download CSV", score.to_csv(index=False).encode("utf-8"),
                    file_name="scorecard.csv", mime="text/csv")
 
+
 # Trends
 st.subheader("Trends")
 colA, colB = st.columns(2)
