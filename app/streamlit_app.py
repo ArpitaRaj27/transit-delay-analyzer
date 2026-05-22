@@ -74,7 +74,7 @@ st.download_button("Download CSV", score.to_csv(index=False).encode("utf-8"),
 st.subheader("Trends")
 colA, colB = st.columns(2)
 
-trend = qdf(f"""
+trend = qdf(f""" 
   SELECT day, route,
          ROUND(AVG(avg_delay_min)::numeric,2) AS avg_delay_min,
          ROUND(AVG(p95_delay_min)::numeric,2) AS p95_delay_min,
